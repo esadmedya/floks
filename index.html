@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,15 +30,17 @@ margin:auto;
 padding:100px 20px;
 }
 
+/* NAVBAR */
+
 nav{
 position:fixed;
 top:0;
 width:100%;
 display:flex;
 justify-content:space-between;
-padding:20px 40px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+padding:18px 40px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(12px);
 z-index:100;
 }
 
@@ -46,11 +49,32 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 opacity:.8;
+font-weight:500;
 }
 
 nav a:hover{
 opacity:1;
 }
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:700;
+}
+
+.logo img{
+height:32px;
+border-radius:6px;
+transition:.3s;
+}
+
+.logo img:hover{
+transform:scale(1.05);
+}
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -60,7 +84,7 @@ justify-content:center;
 text-align:center;
 
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.7)),
 url("images/hero.jpg");
 
 background-size:cover;
@@ -68,7 +92,7 @@ background-position:center;
 }
 
 .hero h1{
-font-size:70px;
+font-size:72px;
 margin-bottom:20px;
 }
 
@@ -80,7 +104,7 @@ opacity:.85;
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:14px 40px;
+padding:15px 40px;
 background:#ff3c3c;
 border-radius:6px;
 text-decoration:none;
@@ -91,18 +115,25 @@ transition:.3s;
 
 .btn:hover{
 background:#ff1c1c;
+transform:translateY(-3px);
 }
 
+/* TITLES */
+
 .section-title{
-font-size:40px;
+font-size:42px;
 margin-bottom:30px;
 }
+
+/* GRID */
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
+
+/* CARDS */
 
 .card{
 background:#141414;
@@ -116,17 +147,21 @@ transform:translateY(-6px);
 background:#1f1f1f;
 }
 
+/* STATS */
+
 .stats{
 display:flex;
 justify-content:space-around;
-margin-top:40px;
+margin-top:50px;
 text-align:center;
 }
 
 .stats h3{
-font-size:42px;
+font-size:44px;
 color:#ff3c3c;
 }
+
+/* PORTFOLIO */
 
 .portfolio{
 display:grid;
@@ -138,8 +173,26 @@ margin-top:40px;
 .instagram{
 background:#111;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 }
+
+/* CLIENTS */
+
+.clients{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:30px;
+align-items:center;
+margin-top:50px;
+opacity:.7;
+}
+
+.clients img{
+width:100%;
+filter:grayscale(100%);
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -158,13 +211,21 @@ background:#050505;
 
 <nav>
 
-<div><strong>Floks</strong></div>
+<div class="logo">
+
+<img src="images/logo.jpg">
+
+<span>Floks</span>
+
+</div>
 
 <div>
+
 <a href="#about">Hakkımızda</a>
 <a href="#services">Hizmetler</a>
 <a href="#portfolio">Projeler</a>
 <a href="#contact">İletişim</a>
+
 </div>
 
 </nav>
@@ -193,11 +254,9 @@ background:#050505;
 
 <p>
 
-Floks Creative olarak 5 yıldır markaları yalnızca görünür kılmakla kalmıyor; onları
-bilinir, yönetilebilir ve sektörüne yön veren güçlü markalara dönüştürüyoruz.
+Floks Creative olarak 5 yıldır markaları yalnızca görünür kılmakla kalmıyor; onları bilinir ve sektörüne yön veren güçlü markalara dönüştürüyoruz.
 
-10 kişilik kreatif ekibimizle prodüksiyon, post-prodüksiyon ve dijital reklam yönetimini
-tek çatı altında sunuyoruz.
+10 kişilik kreatif ekibimizle prodüksiyon, post-prodüksiyon ve dijital reklam yönetimini tek çatı altında sunuyoruz.
 
 </p>
 
@@ -246,7 +305,7 @@ tek çatı altında sunuyoruz.
 </div>
 
 <div class="card">
-<h3>Marka Hikayesi</h3>
+<h3>Marka Stratejisi</h3>
 <p>Markalar için güçlü storytelling ve strateji.</p>
 </div>
 
@@ -269,8 +328,7 @@ tek çatı altında sunuyoruz.
 width="100%"
 height="480"
 frameborder="0"
-scrolling="no"
-allowtransparency="true"></iframe>
+scrolling="no"></iframe>
 
 </div>
 
@@ -314,14 +372,30 @@ scrolling="no"></iframe>
 
 
 
+<section class="container">
+
+<h2 class="section-title">Çalıştığımız Markalar</h2>
+
+<div class="clients">
+
+<img src="images/client1.png">
+<img src="images/client2.png">
+<img src="images/client3.png">
+<img src="images/client4.png">
+
+</div>
+
+</section>
+
+
+
 <section id="contact" class="container">
 
 <h2 class="section-title">İletişim</h2>
 
 <p>
 
-Markanızın hikayesini güçlü görsellerle anlatmak ve geniş kitlelere ulaştırmak için
-Floks Creative ile iletişime geçin.
+Markanızın hikayesini güçlü görsellerle anlatmak ve geniş kitlelere ulaştırmak için bizimle iletişime geçin.
 
 </p>
 
@@ -339,4 +413,5 @@ Floks Creative © 2026
 
 
 </body>
+
 </html>
