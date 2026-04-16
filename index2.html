@@ -89,13 +89,11 @@ background-position:center;
 .hero h1{
 font-size:72px;
 margin-bottom:20px;
-animation:fadeUp 1s ease forwards;
 }
 
 .hero p{
 font-size:22px;
 opacity:.85;
-animation:fadeUp 1.4s ease forwards;
 }
 
 .btn{
@@ -108,13 +106,11 @@ text-decoration:none;
 color:white;
 font-weight:600;
 transition:.3s;
-box-shadow:0 0 20px rgba(255,60,60,0.3);
 }
 
 .btn:hover{
 background:#ff1c1c;
 transform:translateY(-3px);
-box-shadow:0 0 30px rgba(255,60,60,0.6);
 }
 
 /* SECTION */
@@ -145,24 +141,6 @@ background:#141414;
 padding:30px;
 border-radius:14px;
 transition:.4s;
-position:relative;
-overflow:hidden;
-}
-
-.card::after{
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(120deg,transparent,rgba(255,60,60,.2),transparent);
-opacity:0;
-transition:.4s;
-}
-
-.card:hover::after{
-opacity:1;
 }
 
 .card:hover{
@@ -184,7 +162,7 @@ font-size:44px;
 color:#ff3c3c;
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO FIX */
 
 .portfolio{
 display:grid;
@@ -195,8 +173,19 @@ margin-top:40px;
 
 .instagram{
 background:#111;
-padding:20px;
 border-radius:12px;
+overflow:hidden;
+position:relative;
+aspect-ratio: 9/16;
+}
+
+.instagram iframe{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+border:none;
 }
 
 /* SOCIAL */
@@ -232,13 +221,7 @@ padding:16px 18px;
 border-radius:50%;
 font-size:20px;
 text-decoration:none;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
 z-index:999;
-transition:.3s;
-}
-
-.whatsapp-float:hover{
-transform:scale(1.1);
 }
 
 /* FOOTER */
@@ -248,30 +231,6 @@ text-align:center;
 padding:60px;
 opacity:.7;
 background:#050505;
-}
-
-/* ANIMATION */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
 }
 
 </style>
@@ -289,7 +248,7 @@ transform:translateY(0);
 
 <div>
 <a href="#about">Biz</a>
-<a href="#services">Prodüksiyon</a>
+<a href="#services">Yeni Nesil Prodüksiyon</a>
 <a href="#portfolio">Projeler</a>
 <a href="#contact">İletişim</a>
 </div>
@@ -304,7 +263,7 @@ transform:translateY(0);
 </div>
 </section>
 
-<section id="about" class="container reveal">
+<section id="about" class="container">
 <h2 class="section-title">Biz</h2>
 <p>
 Floks Creative olarak markaları yalnızca görünür kılmıyoruz; onları sektörüne yön veren güçlü markalara dönüştürüyoruz.
@@ -312,24 +271,24 @@ Floks Creative olarak markaları yalnızca görünür kılmıyoruz; onları sekt
 
 <div class="stats">
 <div>
-<h3 class="counter" data-target="5">0</h3>
+<h3>5+</h3>
 <p>Yıl Deneyim</p>
 </div>
 
 <div>
-<h3 class="counter" data-target="100">0</h3>
+<h3>100+</h3>
 <p>Mutlu Marka</p>
 </div>
 
 <div>
-<h3 class="counter" data-target="40">0</h3>
+<h3>40+</h3>
 <p>Büyük Proje</p>
 </div>
 </div>
 
 </section>
 
-<section id="services" class="container reveal">
+<section id="services" class="container">
 <h2 class="section-title">Yeni Nesil Prodüksiyon</h2>
 
 <div class="grid">
@@ -357,33 +316,41 @@ Floks Creative olarak markaları yalnızca görünür kılmıyoruz; onları sekt
 </div>
 </section>
 
-<section id="portfolio" class="container reveal">
+<section id="portfolio" class="container">
 <h2 class="section-title">Projeler</h2>
 
 <div class="portfolio">
 
 <div class="instagram">
-<iframe src="https://www.instagram.com/p/DUljrbmDTid/embed" width="100%" height="480"></iframe>
+<iframe src="https://www.instagram.com/p/DUljrbmDTid/embed"></iframe>
 </div>
 
 <div class="instagram">
-<iframe src="https://www.instagram.com/p/DVggTZfjPQo/embed" width="100%" height="480"></iframe>
+<iframe src="https://www.instagram.com/p/DVggTZfjPQo/embed"></iframe>
+</div>
+
+<div class="instagram">
+<iframe src="https://www.instagram.com/p/DTAL550jZ9H/embed"></iframe>
+</div>
+
+<div class="instagram">
+<iframe src="https://www.instagram.com/p/DU5QmHSDK9V/embed"></iframe>
 </div>
 
 </div>
 
 </section>
 
-<section id="contact" class="container reveal">
+<section id="contact" class="container">
 <h2 class="section-title">İletişim</h2>
 
 <p>Markanı büyütmek için bizimle iletişime geç.</p>
 
-<div style="margin-top:25px; display:flex; flex-direction:column; gap:15px; align-items:flex-start;">
+<div style="margin-top:25px; display:flex; flex-direction:column; gap:15px;">
 
-<a class="btn" href="tel:+905551234567">Hemen Ara</a>
+<a class="btn" href="tel:+905330795567">Hemen Ara</a>
 
-<a class="btn" href="https://wa.me/905551234567" target="_blank">
+<a class="btn" href="https://wa.me/905330795567" target="_blank">
 WhatsApp'tan Yaz
 </a>
 
@@ -402,50 +369,9 @@ WhatsApp'tan Yaz
 <p>Floks Creative © 2026</p>
 </footer>
 
-<!-- FLOATING BUTTON -->
-<a href="https://wa.me/905551234567" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/905330795567" class="whatsapp-float" target="_blank">
 💬
 </a>
-
-<script>
-
-/* NAV SCROLL */
-window.addEventListener("scroll",()=>{
-document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50)
-})
-
-/* REVEAL */
-const reveals=document.querySelectorAll(".reveal")
-
-window.addEventListener("scroll",()=>{
-reveals.forEach(el=>{
-const top=el.getBoundingClientRect().top
-if(top<window.innerHeight-100){
-el.classList.add("active")
-}
-})
-})
-
-/* COUNTER */
-const counters=document.querySelectorAll(".counter")
-
-counters.forEach(counter=>{
-const update=()=>{
-const target=+counter.getAttribute("data-target")
-const count=+counter.innerText
-const inc=target/100
-
-if(count<target){
-counter.innerText=Math.ceil(count+inc)
-setTimeout(update,20)
-}else{
-counter.innerText=target+"+"
-}
-}
-update()
-})
-
-</script>
 
 </body>
 </html>
